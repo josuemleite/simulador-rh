@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Funcionario extends RH {
+public abstract class Funcionario {
 
 	private String cpf;
 	private String nome;

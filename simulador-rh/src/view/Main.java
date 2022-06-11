@@ -1,23 +1,66 @@
 package view;
 
-import java.util.Scanner;
+import model.Docente;
 
 public class Main {
 
 	public static void main(String[] args) {
-		
+
 		int opcao;
-		Scanner in = new Scanner(System.in);
+		int tipo;
+
+		Menu menu = new Menu();
 		
 		do {
-			System.out.println("[1] - Cadastrar um novo funcionario (Docente, Tecnico ou Terceiro)");
-			System.out.println("[2] - Pesquisar por um funcionario e retornar todos os seus dados");
-			System.out.println("[3] - Listar todos os funcionarios com todos os seus dados");
-			System.out.println("[0] - Sair");
-			opcao = in.nextInt();
+			
+			opcao = menu.mainMenu();
+			switch (opcao) {
+			case 1: {
+				
+				tipo = menu.menuFuncionario();
+				switch (tipo) {
+				case 1: {
+					Docente d = menu.dadosDocente();
+					System.out.println(d.calculaSalario());
+				}
+					break;
+				case 2: {
+				}
+					break;
+				case 3: {
+
+				}
+					break;
+				case 0: {
+
+				}
+					break;
+				default: {
+					System.out.println("Opcao invalida");
+				}
+					break;
+				}
+			}
+				break;
+			case 2: {
+
+			}
+				break;
+			case 3: {
+
+			}
+				break;
+			case 0: {
+
+			}
+				break;
+			default: {
+				System.out.println("Opcao invalida");
+			}
+				break;
+			}
 		} while (opcao != 0);
-
-		in.close();
+		
+		menu.close();
 	}
-
 }

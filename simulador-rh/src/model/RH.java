@@ -5,6 +5,7 @@ import java.util.List;
 
 public abstract class RH {
 
-	public List<Funcionario> funcionarios = new ArrayList<>();
+	private List<Funcionario> funcionarios = new ArrayList<>();
+	
 	
 }
