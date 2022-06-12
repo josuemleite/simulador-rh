@@ -36,4 +36,11 @@ public class Terceirizado extends Funcionario {
 		}
 		return this.getSalarioBase();
 	}
+	
+	@Override
+	public String dadosFormatados() {
+		String dadosFuncionario = super.dadosFormatados();
+		String dadosTerceirizado = String.format("Data de fim de contrato: %s\nFuncao: %s", this.dataFimContrato, this.funcao);
+		return dadosFuncionario + dadosTerceirizado;
+	}
 }

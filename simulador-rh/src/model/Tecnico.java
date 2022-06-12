@@ -36,4 +36,11 @@ public class Tecnico extends Funcionario {
 		}
 		return this.getSalarioBase();
 	}
+	
+	@Override
+	public String dadosFormatados() {
+		String dadosFuncionario = super.dadosFormatados();
+		String dadosTecnico = String.format("Siape: %s\nDepartamento: %s", this.siape, this.departamento);
+		return dadosFuncionario + dadosTecnico;
+	}
 }

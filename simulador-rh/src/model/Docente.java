@@ -36,4 +36,11 @@ public class Docente extends Funcionario {
 		}
 		return this.getSalarioBase();
 	}
+	
+	@Override
+	public String dadosFormatados() {
+		String dadosFuncionario = super.dadosFormatados();
+		String dadosDocente = String.format("Siape: %s\nArea: %s", this.siape, this.area);
+		return dadosFuncionario + dadosDocente;
+	}
 }
